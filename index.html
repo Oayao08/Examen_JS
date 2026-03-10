@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+
+      #caja {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #333;
+      }
+
+      .fondo-negro {
+        background: black;
+      }
+      .fondo-rojo {
+        background: red;
+      }
+      .fondo-azul {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      id="color"
+      type="text"
+      placeholder="Escriu rojo, azul o deixa buit"
+    />
+    <button id="btn">Executar</button>
+
+    <div class="container">
+      <div id="caja" class="fondo-negro fondo-rojo fondo-azul"></div>
+    </div>
+
+    <script>
+      console.log("Funciona");
+
+      let Caja = document.querySelector("#caja");
+      let input = document.querySelector("#color");
+      let btn = document.querySelector("#btn");
+
+      console.log(caja.classList);
+
+      console.log(Caja);
+      console.log(input);
+      console.log(btn);
+
+      btn.addEventListener("click", Azul);
+      function Azul() {
+        if (input.value === "rojo") {
+          Caja.classList.add("fondo-rojo");
+          Caja.classList.remove("fondo-negro", "fondo-azul");
+          console.log(caja);
+          console.log(caja.classList);
+          Caja.innerHTML = "Color Rojo";
+        } else if (input.value === "azul") {
+          Caja.classList.add("fondo-azul");
+          Caja.classList.remove("fondo-rojo", "fondo-negro");
+          console.log(Caja);
+          console.log(Caja.classList);
+          Caja.innerHTML = "Color Azul";
+        } else if (input.value === "negro") {
+          Caja.classList.add("fondo-negro");
+          Caja.classList.remove("fondo-rojo", "fondo-azul");
+          console.log(caja);
+          console.log(caja.classList);
+          Caja.innerHTML = "Color Negro";
+        } else {
+          Caja.classList.add("fondo-negro");
+          Caja.classList.remove("fondo-rojo", "fondo-azul");
+          console.log(caja);
+          console.log(caja.classList);
+          Caja.innerHTML = "No has insertado un color válido";
+        }
+      }
+
+      let a = 0;
+      let d = 0;
+
+      console.log(a);
+      console.log(d);
+
+      addEventListener("keydown", Teclat);
+
+      function Teclat() {
+        console.log(a);
+        if ((a = "keyup")) {
+          a -= a - 5;
+          console.log(a.value);
+        } else if (d) {
+          d += d + 5;
+          console.log(d.value);
+        }
+      }
+
+      console.log(Teclat);
+    </script>
+  </body>
+</html>
